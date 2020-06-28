@@ -3,13 +3,13 @@
 using namespace std;
 
 int m, n;
+int a[110][10001];
 
 int main()
 {
     cin >> m;
     while (m--)
     {
-        int a[110][10001];
         int num[110] = {0};
         int g, max_g = 0;
         int flag[10001] = {0}, flag_g[110] = {0};
