@@ -14,7 +14,10 @@ int count_num(int n)
 int main()
 {
     int n;
-    cin >> n;
-    cout << count_num(n) << endl;
+    while (cin >> n)
+    {
+        cout << count_num(n) << endl;
+    }
+
     return 0;
 }
