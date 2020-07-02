@@ -28,6 +28,20 @@ int find_miner(int i)
     return 0;
 }
 
+int find_min(int i) //在加油站i所顾及范围内寻找最便宜的加油站
+{
+    int cur_min_price = gas_node[i + 1].price, cur_j = i + 1;
+    for (int j = i + 2; j < n && gas_node[j].loc - gas_node[i].loc <= max_dis; j++)
+    {
+        if (gas_node[j].price < cur_min_price)
+        {
+            cur_min_price = gas_node[j].price;
+            cur_j = j;
+        }
+    }
+    return cur_j;
+}
+
 int main()
 {
     cin >> c >> d >> avg >> n;
@@ -82,10 +96,10 @@ int main()
             {
                 gas_node[i].add = c - cur_gas;
                 cur_gas = c;
-                cur_gas -= (gas_node[i + 1].loc - gas_node[i].loc) / avg;
+                int j = find_min(i);
+                cur_gas -= (gas_node[j].loc - gas_node[i].loc) / avg;
+                i = j;
             }
-
-            i++;
         }
     }
     all_price = 0;
