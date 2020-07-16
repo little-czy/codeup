@@ -5,6 +5,7 @@
         "ostream": "cpp",
         "string": "cpp",
         "stack": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "vector": "cpp"
     }
 }
