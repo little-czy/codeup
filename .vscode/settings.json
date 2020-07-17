@@ -8,6 +8,7 @@
         "utility": "cpp",
         "vector": "cpp",
         "queue": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "map": "cpp"
     }
 }
