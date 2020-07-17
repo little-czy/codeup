@@ -7,6 +7,7 @@
         "stack": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "xstring": "cpp"
     }
 }
