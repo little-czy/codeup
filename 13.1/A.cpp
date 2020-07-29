@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstdio>
 #include <cstring>
 
 using namespace std;
@@ -39,7 +39,7 @@ int get_sum(int x)
 
 int main()
 {
-    ios::sync_with_stdio(false); //加快cin的读入速度，但是scanf将会不能用。
+    // ios::sync_with_stdio(false); //加快cin的读入速度，但是scanf将会不能用。
     while (cin >> t)
     {
         for (int k = 1; k <= t; k++)
@@ -49,16 +49,20 @@ int main()
             cout << "Case " << k << ":" << endl;
             for (int i = 1; i <= n; i++)
             {
-                cin >> a[i];
+                // cin >> a[i];
+                scanf("%d", &a[i]);
                 update(i, a[i]);
             }
-            cin >> command;
+            // cin >> command;
+            scanf("%s", command);
             while (command[0] != 'E')
             {
-                cin >> x >> y;
+                // cin >> x >> y;
+                scanf("%d%d", &x, &y);
                 if (command[0] == 'Q')
                 {
-                    cout << get_sum(y) - get_sum(x - 1) << endl;
+                    // cout << get_sum(y) - get_sum(x - 1) << endl;
+                    printf("%d\n", get_sum(y) - get_sum(x - 1));
                 }
                 else if (command[0] == 'A')
                 {
@@ -68,7 +72,8 @@ int main()
                 {
                     update(x, -y);
                 }
-                cin >> command;
+                // cin >> command;
+                scanf("%s", command);
             }
         }
     }
