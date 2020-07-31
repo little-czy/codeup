@@ -12,6 +12,7 @@ int main()
 {
     while (cin >> t >> m)
     {
+        cin >> t >> m;
         for (int i = 1; i <= m; i++)
         {
             cin >> c[i] >> v[i];
